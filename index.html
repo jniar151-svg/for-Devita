@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Untuk Devita ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
+
+  color: white;
+}
+
+/* VIDEO BACKGROUND */
+#bgVideo {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: -2;
+  filter: brightness(0.45) blur(4px);
+}
+
+/* CONTENT CENTER */
+.content {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.content {
+  opacity: 1;
+  transition: all 0.6s ease;
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -40%);
+}
+
+/* ===== OPENING ===== */
+#clock {
+  font-size: 18px;
+  letter-spacing: 4px;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 70px;
+  text-shadow: 0 0 20px #fff, 0 0 40px pink;
+}
+
+.heart {
+  color: #ff6b81;
+  text-shadow: 0 0 20px pink;
+}
+
+.subtitle {
+  font-size: 16px;
+  opacity: 0.85;
+  margin-top: 10px;
+}
+
+.btn {
+  margin-top: 30px;
+  padding: 14px 35px;
+  border-radius: 30px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.5);
+  color: white;
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  background: rgba(255,255,255,0.3);
+}
+
+/* ===== GIFT PAGE ===== */
+#giftPage h1 {
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+.gifts {
+  display: flex;
+  gap: 80px;
+}
+
+.gift-item {
+  cursor: pointer;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.gift-icon {
+  font-size: 100px;
+  animation: float 3s ease-in-out infinite;
+}
+
+.gift-item:hover {
+  transform: translateY(-10px) scale(1.15);
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+/* ===== MESSAGE PAGE ===== */
+.message-layout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+}
+
+/* SURAT */
+.letter-box {
+  background: white;
+  color: black;
+  padding: 25px;
+  border-radius: 15px;
+  width: 320px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.7);
+}
+
+/* FOTO */
+.photos {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.photos img {
+  width: 150px;
+  border: 10px solid white;
+  border-bottom: 40px solid white;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.8);
+  transition: 0.4s;
+}
+
+/* MIRING AESTHETIC */
+.left img:nth-child(1) { transform: rotate(-12deg); }
+.left img:nth-child(2) { transform: rotate(-6deg); }
+
+.right img:nth-child(1) { transform: rotate(8deg); }
+.right img:nth-child(2) { transform: rotate(12deg); }
+
+.photos img:hover {
+  transform: scale(1.15) rotate(0deg);
+}
+
+/* BACK BUTTON */
+.back-btn {
+  margin-top: 30px;
+  padding: 10px 25px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.3);
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* FLOWER LUCU */
+.flowers {
+  margin-top: 40px;
+  font-size: 65px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.flowers span {
+  display: inline-block;
+  animation: bounce 2s infinite;
+  filter: drop-shadow(0 0 10px rgba(255,182,193,0.8));
+}
+
+.flowers span:nth-child(1) { animation-delay: 0s; }
+.flowers span:nth-child(2) { animation-delay: 0.2s; }
+.flowers span:nth-child(3) { animation-delay: 0.4s; }
+.flowers span:nth-child(4) { animation-delay: 0.6s; }
+.flowers span:nth-child(5) { animation-delay: 0.8s; }
+.flowers span:nth-child(6) { animation-delay: 1s; }
+.flowers span:nth-child(7) { animation-delay: 1.2s; }
+
+@keyframes bounce {
+  0%,100% { transform: translateY(0);}
+  50% { transform: translateY(-20px) scale(1.1);}
+}
+
+/* SPARKLE */
+.sparkle {
+  position: absolute;
+  color: pink;
+  animation: sparkle 2s infinite;
+  opacity: 0.7;
+}
+
+@keyframes sparkle {
+  0% { transform: scale(0.5); opacity: 0;}
+  50% { transform: scale(1.2); opacity: 1;}
+  100% { transform: scale(0.5); opacity: 0;}
+}
+/* ===== TAMBAHAN AESTHETIC FONT ===== */
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+#flowerPage p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+}
+
+.back-btn {
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 1px;
+}
+
+.letter-box h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+.letter-box p {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+}
+/* ===== TITLE ===== */
+#giftPage h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 42px;
+  font-weight: 500;
+  text-shadow: 0 0 25px rgba(255,255,255,0.9);
+  letter-spacing: 1px;
+}
+
+/* LOVE ICON */
+#giftPage h1 span {
+  color: #ff8fab;
+  text-shadow: 0 0 15px pink;
+}
+
+/* ===== ICON AREA ===== */
+.gifts {
+  margin-top: 30px;
+  gap: 90px;
+}
+
+/* ICON STYLE */
+.gift-icon {
+  font-size: 95px;
+  transition: 0.4s;
+  filter: drop-shadow(0 0 15px rgba(255,255,255,0.6));
+}
+
+/* TEXT */
+.gift-item p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  opacity: 0.8;
+  letter-spacing: 1px;
+}
+
+/* HOVER EFFECT */
+.gift-item:hover {
+  transform: translateY(-15px) scale(1.15);
+}
+
+.gift-item:hover .gift-icon {
+  filter: drop-shadow(0 0 30px pink);
+}
+
+/* GLASS EFFECT HALUS */
+#giftPage {
+  backdrop-filter: blur(8px);
+}
+
+/* ANIMASI MASUK */
+#giftPage {
+  animation: fadeSoft 1s ease;
+}
+
+@keyframes fadeSoft {
+  from { opacity: 0; transform: translate(-50%, -40%);}
+  to { opacity: 1; transform: translate(-50%, -50%);}
+}
+/* sedikit glow ke seluruh page */
+#giftPage::before {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: pink;
+  filter: blur(150px);
+  opacity: 0.2;
+  top: 20%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+}
+
+.gallery img {
+  width: 150px;
+  border-radius: 12px;
+  transform: rotate(-5deg);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+  transition: 0.3s;
+}
+
+.gallery img:nth-child(2) {
+  transform: rotate(5deg);
+}
+
+.gallery img:hover {
+  transform: scale(1.1);
+}
+/* TITLE */
+#memoriesPage h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 60px;
+  text-shadow: 0 0 25px pink;
+}
+
+/* FOTO */
+.gallery img {
+  width: 160px;
+  border-radius: 15px;
+  transform: rotate(-5deg) scale(0.95);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+  transition: all 0.4s ease;
+  opacity: 0;
+  animation: fadePhoto 1s forwards;
+}
+
+/* beda-beda delay */
+.gallery img:nth-child(1) { animation-delay: 0.2s; }
+.gallery img:nth-child(2) { animation-delay: 0.4s; }
+.gallery img:nth-child(3) { animation-delay: 0.6s; }
+.gallery img:nth-child(4) { animation-delay: 0.8s; }
+
+/* hover */
+.gallery img:hover {
+  transform: scale(1.15) rotate(0deg);
+}
+
+/* animasi masuk */
+@keyframes fadePhoto {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+.foto-item {
+  text-align: center;
+}
+
+.foto-item img {
+  width: 110px;
+  border-radius: 15px;
+  transform: rotate(-3deg);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+  transition: 0.4s;
+}
+
+.foto-item img:hover {
+  transform: scale(1.1) rotate(0deg);
+}
+
+.foto-item p {
+  font-size: 12px;
+  margin-top: 6px;
+  opacity: 0.8;
+  font-family: 'Poppins', sans-serif;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 kolom */
+  gap: 25px;
+  justify-items: center;
+  margin-top: 40px;
+}
+
+.gallery img {
+  width: 140px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  transition: 0.3s;
+}
+
+/* efek hover biar hidup */
+.gallery img:hover {
+  transform: scale(1.08);
+}
+.gallery div {
+  text-align: center;
+  color: white;
+  font-size: 13px;
+  opacity: 0.9;
+}
+/* POSISI TENGAH */
+.back-center {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+/* STYLE BUTTON */
+.back-center .btn {
+  padding: 12px 35px;
+  border-radius: 30px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 1px;
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* HOVER EFFECT */
+.back-center .btn:hover {
+  transform: scale(1.1);
+  background: rgba(255,255,255,0.2);
+  box-shadow: 0 0 20px rgba(255,192,203,0.7);
+}
+h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 55px;
+  color: white;
+  text-align: center;
+  margin-bottom: 30px;
+  text-shadow: 
+    0 0 10px rgba(255,255,255,0.8),
+    0 0 25px rgba(255,192,203,0.6);
+}
+.card {
+  width: 140px;
+  text-align: center;
+  transition: all 0.4s ease;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  transition: 0.4s;
+}
+
+/* hover efek hidup */
+.card:hover img {
+  transform: scale(1.1) rotate(-2deg);
+  box-shadow: 0 15px 40px rgba(255,192,203,0.5);
+}
+.card p {
+  color: #eee;
+  font-size: 14px;
+  margin-top: 8px;
+  opacity: 0.8;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 25px;
+  justify-items: center;
+  max-width: 900px;
+  margin: auto;
+}
+.card {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.card:nth-child(odd) {
+  animation-delay: 0.5s;
+
+}.gallery div {
+  transition: transform 0.4s ease;
+}
+
+.gallery div:hover {
+  transform: translateY(-10px);
+}
+.flowers span:hover {
+  transform: scale(1.4) rotate(10deg);
+}
+body::after {
+  content: "";
+  position: fixed;
+  width: 400px;
+  height: 400px;
+  background: pink;
+  filter: blur(180px);
+  opacity: 0.15;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+#viewer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  backdrop-filter: blur(10px);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+#viewer img {
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 20px;
+}
+#ending {
+  z-index: 10;
+}
+</style>
+</head>
+
+<body>
+
+<!-- VIDEO -->
+<video autoplay muted loop id="bgVideo">
+  <source src="video.mp4">
+</video>
+
+<!-- AUDIO -->
+<audio id="music" loop>
+  <source src="lagu.mp3">
+</audio>
+
+<!-- OPENING -->
+<div class="content" id="start">
+
+  <div id="clock">00.00.00</div>
+  <p id="since"></p>
+
+  <h1 class="title">
+    Happy Birthday Devita <span class="heart">❤️</span>
+  </h1>
+
+  <p class="subtitle">
+    I hope this little gift will make you happy :)
+  </p>
+
+  <button class="btn" onclick="start()">Click here</button>
+
+</div>
+
+<!-- GIFT -->
+<div class="content hidden" id="giftPage">
+  <h1>
+  These are for you <span>♡</span>
+</h1>
+  <div class="gifts">
+
+    <div class="gift-item" onclick="openGift()">
+      <div class="gift-icon">🧸</div>
+      <p>Message</p>
+    </div>
+
+    <div class="gift-item" onclick="openFlower()">
+       <div class="gift-icon">🌸</div>
+       <p>Flower</p>
+      </div>
+
+    <div class="gift-item" onclick="showMemories()">
+      <div class="gift-icon">📸</div>
+      <p>Memories</p>
+    </div>
+
+  </div>
+</div>
+
+<!-- MESSAGE -->
+<div class="content hidden" id="messagePage">
+
+  <div class="message-layout">
+
+    <!-- KIRI -->
+    <div class="photos left">
+      <img src="foto1.jpg" onclick="openViewer(this.src)">
+      <img src="foto2.jpg" onclick="openViewer(this.src)">
+    </div>
+
+    <!-- SURAT -->
+    <div class="letter-box">
+      <h2>Untuk Kamu ❤️</h2>
+      <p>
+        Happy birthday Devita...<br><br>
+        Aku nggak butuh banyak kata, cukup kamu tahu… kamu itu rumah buat aku.
+        Di saat dunia terasa berat, kamu selalu jadi alasan aku tetap kuat.
+        Semoga kamu selalu bahagia, selalu dijaga, dan semua doa baik kamu pelan-pelan jadi nyata.
+        Terima kasih udah ada dan bertahan sejauh ini sama aku.
+        Aku sayang kamu, lebih dari yang bisa aku jelasin.
+        Terima kasih sudah hadir di hidup aku.<br>
+        Kamu bikin semuanya jadi lebih berarti ❤️<br><br>
+        Aku harap kita bisa terus bareng selamanya 💕
+      </p>
+    </div>
+
+    <!-- KANAN -->
+    <div class="photos right">
+      <img src="foto3.jpg" onclick="openViewer(this.src)">
+      <img src="foto4.jpg" onclick="openViewer(this.src)">
+    </div>
+
+  </div>
+
+  <button class="back-btn" onclick="goBack()">← Back</button>
+
+</div>
+
+<!-- FLOWER PAGE -->
+<div class="content hidden" id="flowerPage">
+
+  <h1 style="font-family: 'Great Vibes'; font-size: 70px; text-shadow: 0 0 25px pink;">
+    For You 🌸
+  </h1>
+
+  <p style="opacity: 1.00;">
+    Ini bunga kecil buat kamu 💗<br>
+    maaf ya kalo aku jarang ngasih bunga, kali ini aku kasih bungan online yang banyak buat dedep....
+  </p>
+
+  <div class="flowers">
+    <span>🌸</span>
+    <span>🌷</span>
+    <span>🌹</span>
+    <span>🌺</span>
+    <span>🌼</span>
+    <span>🌻</span>
+    <span>💐</span>
+  </div>
+
+  <!-- sparkle -->
+  <div class="sparkle" style="top:20%; left:30%;">✨</div>
+  <div class="sparkle" style="top:60%; left:70%;">✨</div>
+  <div class="sparkle" style="top:40%; left:50%;">✨</div>
+
+  <button class="back-btn" onclick="backGift()">← Back</button>
+</div>
+
+<div id="memoriesPage" class="content hidden">
+  <h1>Our Memories 💗</h1>
+
+<div class="gallery">
+
+  <div>
+    <img src="kenangan1.jpg" onclick="openViewer(this.src)">
+    <p>Mau berangkat sekolah 🏫</p>
+  </div>
+
+  <div>
+    <img src="kenangan2.jpg" onclick="openViewer(this.src)">
+    <p>Moment dikelas 😆</p>
+  </div>
+
+  <div>
+    <img src="kenangan3.jpg" onclick="openViewer(this.src)">
+    <p>Bareng kamu 💞</p>
+  </div>
+
+  <div>
+    <img src="kenangan4.jpg" onclick="openViewer(this.src)">
+    <p>Hari spesial ✨</p>
+  </div>
+
+  <div>
+    <img src="kenangan5.jpg" onclick="openViewer(this.src)">
+    <p>Random tapi berarti 🎲</p>
+  </div>
+
+  <!-- BARIS KE 2 -->
+  <div>
+    <img src="kenangan6.jpg" onclick="openViewer(this.src)">
+    <p>Pulang sekolah 🎧</p>
+  </div>
+
+  <div>
+    <img src="kenangan7.jpg" onclick="openViewer(this.src)">
+    <p>Gabut bareng 🤝</p>
+  </div>
+
+  <div>
+    <img src="kenangan8.jpg" onclick="openViewer(this.src)">
+    <p>Buka puasa 🌙</p>
+  </div>
+
+  <div>
+    <img src="kenangan9.jpg" onclick="openViewer(this.src)">
+    <p>Main dikamar 🛏️</p>
+  </div>
+
+  <div>
+    <img src="kenangan10.jpg" onclick="openViewer(this.src)">
+    <p>Sore hari 🌇</p>
+  </div>
+
+</div>
+<div class="back-center">
+  <button class="btn" onclick="goEnding()">Finish 💗</button>
+</div>
+
+</div>
+
+<div id="ending" class="content hidden">
+  <h1 style="font-size:50px;">I love you ❤️</h1>
+  <p style="opacity:0.8;">Terima kasih sudah ada di hidup aku</p>
+
+  <button class="btn" onclick="backToGift()">← Back</button>
+</div>
+
+<script>
+  function showPage(hide, show) {
+  document.getElementById(hide).classList.add("hidden");
+  document.getElementById(show).classList.remove("hidden");
+}
+function start() {
+  showPage("start", "giftPage");
+
+  const music = document.getElementById("music");
+  music.play().catch(() => {
+    console.log("User interaction needed");
+  });
+}
+
+function openGift() {
+  showPage("giftPage", "messagePage");
+}
+
+function goBack() {
+  showPage("messagePage", "giftPage");
+}
+
+/* JAM */
+function updateClock() {
+  let now = new Date();
+  let h = String(now.getHours()).padStart(2, '0');
+  let m = String(now.getMinutes()).padStart(2, '0');
+  let s = String(now.getSeconds()).padStart(2, '0');
+  document.getElementById("clock").innerText = `${h}.${m}.${s}`;
+}
+
+setInterval(updateClock, 1000);
+updateClock();
+function openFlower() {
+  showPage("giftPage", "flowerPage");
+}
+
+function backGift() {
+  showPage("flowerPage", "giftPage");
+}
+function showMemories() {
+  showPage("giftPage", "memoriesPage");
+}
+function backHome() {
+  showPage("memoriesPage", "giftPage");
+}
+const text = "Happy Birthday Devita ❤️";
+let i = 0;
+
+function typeEffect() {
+  if (i < text.length) {
+    document.querySelector(".title").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typeEffect, 80);
+  }
+}
+
+window.onload = () => {
+  document.querySelector(".title").innerHTML = "";
+  typeEffect();
+};
+function openViewer(src) {
+  document.getElementById("viewer").style.display = "flex";
+  document.getElementById("viewerImg").src = src;
+}
+
+function closeViewer() {
+  document.getElementById("viewer").style.display = "none";
+}
+function goEnding() {
+  showPage("memoriesPage", "ending");
+}
+const startDate = new Date("2022-08-16"); // ganti tanggal jadian
+const now = new Date();
+const diff = Math.floor((now - startDate) / (1000*60*60*24));
+
+document.getElementById("since").innerText =
+  "Kita sudah bersama " + diff + " hari 💗";
+
+  function backToGift() {
+  showPage("ending", "giftPage");
+}
+</script>
+
+<div id="viewer" onclick="closeViewer()">
+  <img id="viewerImg">
+</div>
+
+</body>
+</html>
